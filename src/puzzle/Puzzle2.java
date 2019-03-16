@@ -18,7 +18,7 @@ public class Puzzle2 {
     public static void main(String[] args) {
         int[] input = {1, 2, 3, 4, 5};
         //int[] input = {3,2,1};
-        Arrays.stream(calculateReuslt(input)).forEach(value -> System.out.println(value));
+        Arrays.stream(calculateReuslt(input)).forEach(System.out::println);
     }
 
     private static int[] calculateReuslt(int[] input) {
@@ -30,7 +30,6 @@ public class Puzzle2 {
     }
 
     private static int leftMultiply(int[] in, int i) {
-        Arrays.stream(in).limit(i).reduce(i, Integer::m).orElseGet(() -> 1);
         return Arrays.stream(in).limit(i).reduce((i1, i2) -> i1 * i2).orElseGet(() -> 1);
     }
 

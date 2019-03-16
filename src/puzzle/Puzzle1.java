@@ -16,14 +16,6 @@ public class Puzzle1 {
     private static final int k = 17;
 
     public static void main(String[] args) {
-
-        IntStream.of(10,15,3,7).forEach(i -> {
-            if (IntStream.range(0,i).filter(j -> i+j==k).findFirst().isPresent()) {
-                return true;
-            }
-            return false;
-        });
-
         System.out.println(satisfiesRequirement(numbers, k));
     }
 
